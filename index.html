@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/lib/starability-basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Carte</title>
+</head>
+
+<body>
+    <!--En-Tête-->
+    <header>KelResto</header>
+
+    <!--Partie Principale-->
+    <div id="main">
+        <nav>
+            <!--Zone de filtre-->
+            <div id="filter">
+                <p class="filter-title">Filter les restaurants<br></p>
+                <div id="filter-choice">
+                    <span>Note : de </span>
+                    <select id="filter-min">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span> à </span>
+                    <select id="filter-max">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button id="filter-button" type="submit">FILTRER</button>
+                    <button id="reset-button" type="submit">RESET</button>
+                </div>
+            </div>
+            <div id="list"></div>
+        </nav>
+
+        <!--La Carte-->
+        <div id="map"></div>
+
+
+        <!-- Modal d'ajout de restaurant-->
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="form_new_resto">
+                    <p class="input_new_resto_title">Nom du Nouveau Resto</p>
+                    <input type="text" name="resto">
+                    <p class="input_new_resto_title">Votre Nom</p>
+                    <input type="text" name="name">
+                    <p class="note_new_resto_title">Votre Note</p>
+                    <select id="mySelect">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <p class="new_resto_comment_title">Votre Commentaire</p>
+                    <textarea name="comment" form="form_new_resto"></textarea><br>
+                    <input id="validebutton_new_resto" type="button" value="Poster">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeZE73r7X1AIkxje2eNIYmH_4Tx9HERRY&libraries=geometry,places&ext=.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/restaurants.js"></script>
+    <script src="js/tools.js" defer></script>
+
+</body>
+
+</html>

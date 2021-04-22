@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+p,
+input,
+select,
+textarea {
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+body {
+    font-family: Gill Sans, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: orange;
+    font-size: 4vh;
+}
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+#main > #map {
+    flex: 1;
+}
+
+#main > nav {
+    flex: 0 0 40vw;
+}
+
+#map {
+    height: 94vh;
+}
+
+nav {
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+nav > #filter {
+    flex: 0 0 5vh;
+}
+
+nav > #list {
+    flex: 1 0 75vh;
+}
+
+#filter {
+    text-align: center;
+    border-bottom: 1px solid;
+    padding: 1em;
+}
+
+#list {
+    max-height: 85vh;
+    overflow-y: scroll;
+}
+
+.restaurant {
+    padding: 1em;
+    border-bottom: 1px solid;
+}
+
+.svrestaurant {
+    width: 15vw;
+}
+
+.body-restaurant {
+    max-height: 0;
+    overflow-y: scroll;
+    transition: max-height 0.2s;
+    flex-shrink: 0;
+    background-color: lightyellow;
+}
+
+.button_comment {
+    margin: 3vh;
+    display: none;
+}
+
+.text-review {
+    margin: 3vh;
+}
+
+.button_comment,
+.starability-result,
+.svrestaurant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form_comment {
+    display: none;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    width: 30vw;
+}
+
+.title-restaurant,
+#form_comment,
+.adress-restaurant,
+.author-review {
+    text-align: center;
+}
+
+.adress-restaurant,
+.author-review,
+.text-review {
+    font-size: 0.9rem;
+}
+
+.filter-title,
+.title-restaurant,
+.author-review {
+    font-weight: bold;
+}
+
+.valide_button_comment {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.svrestaurant {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.active {
+    background-color: lightyellow;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: orange;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 36vw;
+}
+
+#form_new_resto {
+    padding: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid;
+    width: 30vw;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
